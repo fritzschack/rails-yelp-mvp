@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="container_text">
+    <h1>Welcome to a list of amazing restaurants</h1>
+
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+        <li>
+          <h3><%= link_to restaurant.name, restaurant_path(restaurant) %> <small><%= restaurant.category.capitalize %></small></h3>
+          <p><%= restaurant.address %> | <%= restaurant.phone_number %></p>
+          <hr>
+        </li>
+      <% end %>
+    </ul>
+
+    <div class="button_div">
+      <%= button_to "Create a new restaurant", restaurants_new_path, :id => "create_button", :class => "btn btn-warning", method: :get %>
+    </div>
+  </div>
+</div>
+

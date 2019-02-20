@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="container_text">
+    <h3><%= link_to "⬅︎", restaurants_path%></h3>
+    <h1><%= @restaurant.name %></h1>
+
+    <div class="restaurant_information">
+      <h4><strong>Category:</strong> <%= @restaurant.category.capitalize %></h4>
+      <h4><strong>Address:</strong> <%= @restaurant.address %></h4>
+      <h4><strong>Phone:</strong> <%= @restaurant.phone_number %></h4>
+    </div>
+
+    <div class="restaurant_reviews">
+      <% if @restaurant.reviews.any? %>
+        <h4><strong>Reviews:</strong></h4>
+        <table class="table">
+          <tr>
+            <th>Rating</th>
+            <th>Comment</th>
+          </tr>
+          <% @restaurant.reviews.each do |review| %>
+          <tr>
+            <td><h5><%= review.rating %> / 5</h5></td>
+            <td><h5><%= review.content %></h5></td>
+          </tr>
+          <% end %>
+        </table>
+      <% end %>
+    </div>
+
+    <div class="button_div">
+      <%= button_to "Create a new review", restaurant_reviews_new_path(@restaurant), :id => "create_button", :class => "btn btn-warning", method: :get %>
+    </div>
+  </div>
+</div>
+

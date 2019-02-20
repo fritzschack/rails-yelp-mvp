@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Restaurant.create(name: 'Osteria Francescana', address: 'Via Stella, 22, 41121 Modena MO, Italy', phone_number: '+39 059 223912', category: 'italian')
+Restaurant.create(name: 'El Celler de Can Roca', address: 'Can Sunyer 48, 17007 Girona, Spain', phone_number: '+34 972 222157', category: 'french')
+Restaurant.create(name: 'Mirazur', address: '30, avenue Aristide Briand, 06500 Menton, France', phone_number: '+33 492 418686', category: 'french')
+Restaurant.create(name: 'Eleven Madison Park', address: '11 Madison Avenue, 10010 New York, USA', phone_number: '+1 212 8890905', category: 'french')
+Restaurant.create(name: 'Gaggan', address: '68/1 Soi Langsuan Ploenchit Road, 10330 Bangkok, Thailand', phone_number: '+66 662 6521700', category: 'chinese')
